@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style/partials/variables.scss";
+@import "../../assets/style/partials/variables.scss";
 
 header {
   height: 100px;
