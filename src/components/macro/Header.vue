@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img src="" alt="" />
+    <img src="../../assets/img/logo-small.svg" alt="" />
   </header>
 </template>
 
@@ -14,7 +14,14 @@ export default {
 @import "../../assets/style/partials/variables.scss";
 
 header {
-  height: 100px;
+  height: 80px;
   background-color: $darker;
+  display: flex;
+  align-items: center;
+  img {
+    height: 65%;
+    margin-left: 15px;
+    filter: $green-filter;
+  }
 }
 </style>

@@ -1,9 +1,13 @@
 <template>
   <a class="card" href="#">
     <img :src="obj.poster" :alt="obj.title" />
-    <h3>{{obj.title}}</h3>
-    <div class="artist">{{obj.author}}</div>
-    <div class="year">{{obj.year}}</div>
+    <div class="text">
+      <h3>{{ obj.title }}</h3>
+      <div class="details">
+        <div class="artist">{{ obj.author }}</div>
+        <div class="year">{{ obj.year }}</div>
+      </div>
+    </div>
   </a>
 </template>
 
@@ -20,20 +24,30 @@ export default {
 @import "../../assets/style/partials/variables.scss";
 
 .card {
+  text-decoration: none;
   &:hover img {
     opacity: 1;
-    transition: 0.5s;
   }
   img {
     width: 80%;
     opacity: 0.9;
+    transition: 0.5s;
   }
   .text {
     width: 80%;
+    margin: 0 auto;
+    text-align: center;
     margin-top: 5px;
     color: $light-text;
-    font-size: 13px;
-    text-transform: uppercase;
+    h3 {
+      text-transform: uppercase;
+      font-size: 20px;
+      margin: 15px 0 15px 0;
+    }
+    .details {
+      color: $medium-text;
+      font-size: 17px;
+    }
   }
 }
 </style>
