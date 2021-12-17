@@ -1,5 +1,5 @@
 <template>
-  <Card :obj="cards[0]" />
+  <Card v-for:="card in cards" :key="card.id" :obj="card" />
 </template>
 
 <script>
