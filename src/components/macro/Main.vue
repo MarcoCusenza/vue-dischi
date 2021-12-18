@@ -1,6 +1,6 @@
 <template>
   <main>
-    <CardList />
+    <CardList :cards="cards"/>
   </main>
 </template>
 
@@ -11,6 +11,9 @@ export default {
   name: 'Main',
   components: {
     CardList,
+  },
+  props:{
+    cards: [],
   }
 }
 </script>

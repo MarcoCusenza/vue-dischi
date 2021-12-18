@@ -39,6 +39,7 @@ export default {
     text-align: center;
     margin-top: 5px;
     color: $light-text;
+    
     h3 {
       text-transform: uppercase;
       font-size: 20px;
