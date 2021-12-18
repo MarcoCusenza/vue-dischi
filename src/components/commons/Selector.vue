@@ -42,6 +42,7 @@ export default {
     font-weight: bold;
     font-size: 16px;
     color: $lighter;
+    margin-bottom: 30px;
 
     option {
       font-weight: bold;

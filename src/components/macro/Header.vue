@@ -16,8 +16,9 @@ export default {
 
 header {
   height: 80px;
-  line-height: 80px;
   background-color: $darker;
+  display: flex;
+  align-items: center;
   img {
     height: 65%;
     margin-left: 15px;
