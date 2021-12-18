@@ -1,7 +1,12 @@
 <template>
   <section class="container-selector">
-    <select name="selector" id="selector">
-      <option v-for="(genre, i) in genres" :key="i" value="genre">
+    <select name="selector" id="selector" v-model="searchText">
+      <option
+        v-for="(genre, i) in genres"
+        :key="i"
+        :value="genre"
+        @click.prevent="$emit('search', genre)"
+      >
         {{ genre }}
       </option>
     </select>
@@ -14,6 +19,11 @@ export default {
   props: {
     genres: [],
   },
+  data() {
+    return {
+      searchText: "",
+    };
+  },
 };
 </script>
 
@@ -23,9 +33,10 @@ export default {
   select {
     min-width: 120px;
     height: 30px;
+    padding: 5px;
     background-color: $dark;
     box-shadow: none;
-    border: 2px solid $lighter;
+    border: none;
     border-radius: 5px;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
@@ -34,6 +45,7 @@ export default {
 
     option {
       font-weight: bold;
+      padding:5px;
     }
   }
 }

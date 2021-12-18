@@ -1,24 +1,20 @@
 <template>
   <main>
-    <CardList :cards="cards"/>
+    <CardList />
   </main>
 </template>
 
 <script>
-import CardList from '../sections/CardList.vue'
+import CardList from "../sections/CardList.vue";
 
 export default {
-  name: 'Main',
+  name: "Main",
   components: {
     CardList,
   },
-  props:{
-    cards: [],
-  }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/style/partials/variables.scss";
-
 </style>
